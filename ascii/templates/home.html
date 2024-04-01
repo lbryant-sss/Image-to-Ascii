@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if object.my_image %}
+    <p>Uploaded Image URL: {{ uploaded_image.url }}</p>
+    <img src="{{ object.my_image.url }}" alt="Uploaded Image">
+{% else %}
+    <p>No image uploaded.</p>
+{% endif %}
+
+    
+    
+ 
+    <div>
+        <strong>No images uploaded yet</strong>
+    </div>
+ 
+</body>
+</html>
