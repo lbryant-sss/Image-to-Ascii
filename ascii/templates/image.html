@@ -1,25 +1,16 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the image</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
-
-    <title>Document</title>
 </head>
 <body>
     
-    <div class="main-container">
-        <div class="blur-circle1">
-    
-        </div>
-        <div class="blur-circle2">
-    
-        </div>
-          <!-- Start Landing Page -->
-      <div class="landing-page">
+       <!-- Start Landing Page -->
+       <div class="landing-page">
         <header>
           <div class="container">
             <a href="#" class="logo">ASCII <b>Website</b></a>
@@ -37,11 +28,14 @@
             <div class="info">
               <h1>Looking For Inspiration</h1>
               <p>
-                <form method="post" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit">Submit</button>
-                </form>
+                <div class="all_images">
+                    <div >
+                        <img src="{{ last_uploaded_image.my_image.url }}" alt="Uploaded Image" height="200px" width="'auto">
+                    </div>
+                    <div height="200px" width="'auto">
+                        <img src="" alt="">
+                    </div>
+                </div>
               </p>
               
             </div>
@@ -53,9 +47,6 @@
       </div>
       <!-- End Landing Page -->
     </div>
-
-
-
- 
+    
 </body>
 </html>
