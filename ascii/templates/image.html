@@ -1,52 +1,41 @@
 {% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>the image</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <link rel="stylesheet" href="{% static 'css/images.css' %}">
 </head>
 <body>
-    
-       <!-- Start Landing Page -->
-       <div class="landing-page">
-        <header>
-          <div class="container">
-            <a href="#" class="logo">ASCII <b>Website</b></a>
-            <ul class="links">
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Work</li>
-              <li>Info</li>
-              <li>IMAGE TO ASCII</li>
-            </ul>
-          </div>
-        </header>
-        <div class="content">
-          <div class="container">
-            <div class="info">
-              <h1>Looking For Inspiration</h1>
-              <p>
-                <div class="all_images">
-                    <div >
-                        <img src="{{ last_uploaded_image.my_image.url }}" alt="Uploaded Image" height="200px" width="'auto">
-                    </div>
-                    <div height="200px" width="'auto">
-                        <img src="" alt="">
-                    </div>
-                </div>
-              </p>
-              
-            </div>
-            <div class="image">
-              <img class="main-image" src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-working-using-vr-tech-3840669-3202986.png?f=webp">
-            </div>
-          </div>
+  <div class="landing-page">
+    <header>
+        <div class="container">
+          <a href="/" class="logo">ASCII <b>Website</b></a>
+          <ul class="links">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Work</li>
+            <li>Info</li>
+            <li>IMAGE TO ASCII</li>
+          </ul>
         </div>
-      </div>
-      <!-- End Landing Page -->
+      </header></div>
+    <div class="container">
+        <div class="column">
+            <p>The Image You Just Uploaded</p>
+            <img src="{{ last_uploaded_image.my_image.url }}" alt="Uploaded Image" height="200px" width="'auto">
+        </div>
+        <div class="column">
+            <p>Here's the Converted ASCII Character Image ~ You Can Copy It</p>
+            <img src="{{ last_uploaded_image.my_image.url }}" alt="Uploaded Image" height="200px" width="'auto">
+        </div>
     </div>
-    
+    <footer>
+        <p>This is the footer</p>
+    </footer>
 </body>
 </html>

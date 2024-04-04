@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 39%, rgba(7,45,54,1) 100%);
+}
+
+header {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center the columns horizontally */
+    margin: 15px 70px;
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px; /* Margin away from left and right sides */
+    border: 1px solid #ccc; /* Visible border */
+    border-radius: 10px; /* 10px border radius */
+    padding: 20px; /* Add padding for content */
+    min-height: calc(100vh - 230px); /* Adjust as needed */
+}
+.column img{
+    min-height: calc(55vh);
+    width: 40vw;
+    border-radius: 20px;
+}
+
+
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
