@@ -31,7 +31,9 @@
         </div>
         <div class="column">
             <p>Here's the Converted ASCII Character Image ~ You Can Copy It</p>
-            <img src="{{ last_uploaded_image.my_image.url }}" alt="Uploaded Image" height="200px" width="'auto">
+            {% if ascii_image_url %}
+            <img src="{{ ascii_image_url }}" alt="ASCII Art Image" height="200px" width="'auto">
+            {% endif %}
         </div>
     </div>
     <footer>
