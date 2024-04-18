@@ -44,11 +44,7 @@
               <p>
                 <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <!-- CUSTOM INPUT  <label for="id_my_image">Choose Image:</label>
-                    <label class="custom-file-input">
-                      <input type="file" name="my_image" id="id_my_image" class="custom-file-input">
-                      <span class="custom-file-input-label">Choose Image File</span>
-                    </label>-->
+                    
                     {{ form.as_p }}
                     <button type="submit">Upload Image</button>
                 </form>
